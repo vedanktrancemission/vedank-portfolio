@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vedank Sharma - Full Stack Developer Portfolio">
+    <meta name="keywords" content="Full Stack Developer, Java, Spring Boot, AWS, GCP, Angular, Microservices">
+    <title>Vedank Sharma | Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-text">VS</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <div class="theme-toggle-icon">
+            <!-- Sun Icon -->
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <!-- Moon Icon -->
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+        </div>
+    </button>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="grid-pattern"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+
+                <h1 class="hero-title">
+                    <span class="title-line">Hi, I'm</span>
+                    <span class="title-name">Vedank Sharma</span>
+                    <span class="title-role">Full Stack Developer</span>
+                </h1>
+                <p class="hero-description">
+                    Results-driven Full Stack developer with 6+ years of experience designing scalable microservices,
+                    RESTful APIs, and cloud-based solutions using Spring Boot, FastAPI, Docker, Kubernetes, and AWS/GCP.
+                </p>
+                <div class="hero-certifications">
+                    <div class="cert-badge">
+                        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                        <a href="https://www.credly.com/badges/90cdcad7-6f27-4156-9293-432fe88bd64a/linked_in_profile"
+                            target="_blank" rel="noopener noreferrer"><span>AWS Solution Architect -
+                                Associate</span></a>
+                    </div>
+                    <div class="cert-badge">
+                        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                        <a href="https://www.credly.com/badges/94c4581d-8138-4905-9319-f179cfd18380/linked_in_profile"
+                            target="_blank" rel="noopener noreferrer"><span>GCP Cloud Digital Leader</span></a>
+                    </div>
+                    <div class="cert-badge">
+                        <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                        <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=388B6608A1CF0247812B2B2CA8501A6E849B4F3794DD7081DB1D5E405B2E2DA8"
+                            target="_blank" rel="noopener noreferrer"><span>Oracle Generative AI Professional</span></a>
+                    </div>
+                </div>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View Projects</span>
+                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get in Touch</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="6">0</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-label">Companies</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="15">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-dot red"></span>
+                        <span class="code-dot yellow"></span>
+                        <span class="code-dot green"></span>
+                        <span class="code-title">developer.js</span>
+                    </div>
+                    <pre class="code-content"><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="property">name</span>: <span class="string">"Vedank Sharma"</span>,
+  <span class="property">role</span>: <span class="string">"Full Stack Developer"</span>,
+  <span class="property">experience</span>: <span class="number">6</span>,
+  <span class="property">skills</span>: [
+    <span class="string">"Java"</span>, <span class="string">"Spring Boot"</span>,
+    <span class="string">"AWS"</span>, <span class="string">"GCP"</span>,
+    <span class="string">"Angular"</span>, <span class="string">"Kubernetes"</span>
+  ],
+  <span class="property">passion</span>: <span class="string">"Building scalable solutions"</span>,
+  <span class="function">build</span>() {
+    <span class="keyword">return</span> <span class="string">"Amazing things"</span>;
+  }
+};</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-text">Scroll to explore</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Technical Expertise</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-description">A comprehensive overview of my technical stack and expertise</p>
+            </div>
+            <div class="bento-grid">
+                <!-- Languages -->
+                <div class="bento-card bento-large">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java 8/11</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Shell Scripting</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="bento-card bento-medium">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">Spring Cloud</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Hibernate</span>
+                        <span class="skill-tag">JPA</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Angular</span>
+                    </div>
+                </div>
+
+                <!-- Microservices -->
+                <div class="bento-card bento-medium">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <line x1="21.17" y1="8" x2="12" y2="8"></line>
+                            <line x1="3.95" y1="6.06" x2="8.54" y2="14"></line>
+                            <line x1="10.88" y1="21.94" x2="15.46" y2="14"></line>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Microservices</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">Event-Driven</span>
+                        <span class="skill-tag">API Gateway</span>
+                    </div>
+                </div>
+
+                <!-- AWS -->
+                <div class="bento-card bento-small">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">AWS</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">EC2</span>
+                        <span class="skill-tag">S3</span>
+                        <span class="skill-tag">Lambda</span>
+                        <span class="skill-tag">RDS</span>
+                        <span class="skill-tag">EKS</span>
+                        <span class="skill-tag">API Gateway</span>
+                        <span class="skill-tag">CloudFormation</span>
+                        <span class="skill-tag">Step Functions</span>
+                        <span class="skill-tag">CloudWatch</span>
+                    </div>
+                </div>
+
+                <!-- GCP -->
+                <div class="bento-card bento-small">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">GCP</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">GKE</span>
+                        <span class="skill-tag">BigQuery</span>
+                        <span class="skill-tag">Cloud Run</span>
+                        <span class="skill-tag">Pub/Sub</span>
+                        <span class="skill-tag">IAM</span>
+                    </div>
+                </div>
+
+                <!-- DevOps -->
+                <div class="bento-card bento-wide">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">DevOps & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Helm</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Featured Work</span>
+                <h2 class="section-title">Project Gallery</h2>
+                <p class="section-description">A showcase of my recent projects and their impact</p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="speartip-logo.png" alt="Speartip Logo" class="project-logo">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-company">Vertical Relevance</div>
+                        <h3 class="project-title">Speartip</h3>
+                        <p class="project-description">
+                            Multi-tenant integration platform with AWS Lambda, Step Functions, and Angular frontend.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java 11</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">DynamoDB</span>
+                            <span class="tech-tag">Angular</span>
+                        </div>
+                        <ul class="project-achievements">
+                            <li>Implemented AWS Lambda with CloudWatch logging</li>
+                            <li>Designed Step Functions for multi-tenant integrations</li>
+                            <li>Built Angular frontend with PrimeNG</li>
+                            <li>Created CI/CD pipeline with GitHub Actions</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="glow-logo.png" alt="Glow Enterprise AI Logo" class="project-logo">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-company">Globant</div>
+                        <h3 class="project-title">Glow - Enterprise AI</h3>
+                        <p class="project-description">
+                            AI-driven expense management microservices with real-time chat and document processing.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java 11</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Kafka</span>
+                            <span class="tech-tag">GKE</span>
+                            <span class="tech-tag">OpenAI API</span>
+                        </div>
+                        <ul class="project-achievements">
+                            <li>Reduced latency by 40% with optimized microservices</li>
+                            <li>Integrated OpenAI RAG API with async data handling</li>
+                            <li>Implemented WebSockets for streaming AI responses</li>
+                            <li>Deployed on GKE with 3x faster deployment time</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="telia-logo.png" alt="Telia Logo" class="project-logo">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-company">Capgemini</div>
+                        <h3 class="project-title">Telia - Oracle BRM Cloud</h3>
+                        <p class="project-description">
+                            Cloud-native microservices migration for telecom billing system.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java 11</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Kafka</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Oracle Cloud</span>
+                        </div>
+                        <ul class="project-achievements">
+                            <li>Achieved 50% improved scalability</li>
+                            <li>Built RESTful APIs for account management</li>
+                            <li>Reduced latency by 35% with Kafka streaming</li>
+                            <li>Mentored 4 developers in microservices</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="stl-logo.png" alt="Sterlite Technologies Logo" class="project-logo">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-company">Sterlite Technologies</div>
+                        <h3 class="project-title">Digital Policy Charging System</h3>
+                        <p class="project-description">
+                            Full-stack policy charging system with real-time visualization.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java 11</span>
+                            <span class="tech-tag">Spring</span>
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">Kafka</span>
+                            <span class="tech-tag">AWS ECS</span>
+                        </div>
+                        <ul class="project-achievements">
+                            <li>Led full-stack development</li>
+                            <li>Built responsive Angular admin dashboard</li>
+                            <li>Reduced CDR processing latency by 40%</li>
+                            <li>Achieved 99.5% uptime on AWS ECS</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 5 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="mastercard-logo.png" alt="Mastercard Logo" class="project-logo">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-company">CSG Systems International</div>
+                        <h3 class="project-title">Mastercard USA</h3>
+                        <p class="project-description">
+                            Convergent billing system processing 5M+ daily transactions.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java 8</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">SOAP/REST</span>
+                            <span class="tech-tag">Oracle SQL</span>
+                        </div>
+                        <ul class="project-achievements">
+                            <li>Processed 5M+ daily transactions</li>
+                            <li>Improved system interoperability by 30%</li>
+                            <li>Reduced manual errors by 25%</li>
+                            <li>Achieved 99.9% data consistency</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Project 6 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="vodafoneziggo-logo.png" alt="VodafoneZiggo Logo" class="project-logo">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-company">Amdocs</div>
+                        <h3 class="project-title">VodafoneZiggo Netherlands</h3>
+                        <p class="project-description">
+                            Customer management system with cloud migration.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java 8</span>
+                            <span class="tech-tag">J2EE</span>
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">AWS EKS</span>
+                            <span class="tech-tag">Kubernetes</span>
+                        </div>
+                        <ul class="project-achievements">
+                            <li>Reduced data load times by 30%</li>
+                            <li>Cut costs by 20% with AWS migration</li>
+                            <li>Reduced release cycles by 40%</li>
+                            <li>Improved system scalability 3x</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Career Journey</span>
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-description">My career progression and key achievements</p>
+            </div>
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">May 2025 – Current</div>
+                        <h3 class="timeline-title">Software Engineer</h3>
+                        <div class="timeline-company">Vertical Relevance, Pune, India</div>
+                        <p class="timeline-description">
+                            Working on Speartip project - a multi-tenant integration platform using AWS Lambda,
+                            Step Functions, and Angular. Implementing secure API key management and automated
+                            workflow orchestration.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Java 11</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">DynamoDB</span>
+                            <span class="tech-tag">Angular</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Oct 2024 – Apr 2025</div>
+                        <h3 class="timeline-title">Senior Software Engineer</h3>
+                        <div class="timeline-company">Globant, Pune, India</div>
+                        <p class="timeline-description">
+                            Built AI-driven microservices for Glow - Globant Enterprise AI. Developed Angular
+                            frontend with real-time chat and document upload features. Integrated OpenAI RAG
+                            API and deployed on GKE.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Java 11</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Kafka</span>
+                            <span class="tech-tag">GKE</span>
+                            <span class="tech-tag">OpenAI API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Sep 2022 – Oct 2024</div>
+                        <h3 class="timeline-title">Consultant</h3>
+                        <div class="timeline-company">Capgemini, Pune, India</div>
+                        <p class="timeline-description">
+                            Migrated legacy Oracle BRM to cloud-native Spring Boot microservices on Kubernetes.
+                            Built RESTful APIs for account management and implemented Kafka event streaming
+                            for real-time billing.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Java 11</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Kafka</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Oracle Cloud</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Feb 2022 – Aug 2022</div>
+                        <h3 class="timeline-title">Senior Software Engineer</h3>
+                        <div class="timeline-company">Sterlite Technologies Limited, Pune</div>
+                        <p class="timeline-description">
+                            Led full-stack development of Digital Policy Charging System. Built responsive
+                            Angular admin dashboard with real-time policy visualization. Designed Kafka-based
+                            messaging architecture.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Java 11</span>
+                            <span class="tech-tag">Spring</span>
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">Kafka</span>
+                            <span class="tech-tag">AWS ECS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                        <div class="marker-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Nov 2020 – Feb 2022</div>
+                        <h3 class="timeline-title">Dev Consultant</h3>
+                        <div class="timeline-company">CSG Systems International, Bangalore, India</div>
+                        <p class="timeline-description">
+                            Developed core modules of Singl.eView Convergent Billing System for Mastercard.
+                            Built SOAP/REST APIs for usage tracking and automated billing workflows with
+                            Python/Perl scripts.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Java 8</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">SOAP/REST</span>
+                            <span class="tech-tag">Oracle SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 6 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">July 2019 – Nov 2020</div>
+                        <h3 class="timeline-title">Software Engineering Associate</h3>
+                        <div class="timeline-company">Amdocs, Pune, India</div>
+                        <p class="timeline-description">
+                            Built Java 8/J2EE backend services and Angular UI components for VodafoneZiggo.
+                            Migrated billing modules to AWS EKS and refactored monolithic components into
+                            Spring Boot microservices.
+                        </p>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Java 8</span>
+                            <span class="tech-tag">J2EE</span>
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">AWS EKS</span>
+                            <span class="tech-tag">Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-background">
+            <div class="gradient-orb orb-4"></div>
+            <div class="gradient-orb orb-5"></div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get in Touch</span>
+                <h2 class="section-title">Let's Connect</h2>
+                <p class="section-description">I'm always open to discussing new opportunities and collaborations</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <h3 class="contact-title">Email</h3>
+                        <a href="mailto:vedsharmaamt@gmail.com" class="contact-link">vedsharmaamt@gmail.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="contact-title">Phone</h3>
+                        <a href="tel:+918149301765" class="contact-link">+91 8149301765</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="contact-title">LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/vedank-sharma-748a49a3" class="contact-link"
+                            target="_blank" rel="noopener noreferrer">Connect on
+                            LinkedIn</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">VS</span>
+                    <p class="footer-text">Building scalable solutions with modern technologies.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#hero" class="footer-link">Home</a>
+                    <a href="#skills" class="footer-link">Skills</a>
+                    <a href="#projects" class="footer-link">Projects</a>
+                    <a href="#experience" class="footer-link">Experience</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Vedank Sharma. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
