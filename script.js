@@ -149,7 +149,6 @@ function initNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
 
     // Scroll effect for navbar
-    let lastScroll = 0;
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset;
 
@@ -158,8 +157,6 @@ function initNavigation() {
         } else {
             navbar.classList.remove('scrolled');
         }
-
-        lastScroll = currentScroll;
     });
 
     // Mobile menu toggle
@@ -359,118 +356,6 @@ function initParallaxEffects() {
 }
 
 
-
-// ============================================
-// Notification System
-// ============================================
-function showNotification(message, type = 'info') {
-    const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
-    notification.innerHTML = `
-        <span class="notification-message">${message}</span>
-        <button class="notification-close" aria-label="Close notification">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-        </button>
-    `;
-
-    // Add styles
-    const style = document.createElement('style');
-    style.textContent = `
-        .notification {
-            position: fixed;
-            top: 100px;
-            right: 20px;
-            padding: 1rem 1.5rem;
-            background: var(--bg-glass);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: var(--radius-lg);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            z-index: 1000;
-            animation: slideIn 0.3s ease;
-            box-shadow: var(--shadow-xl);
-        }
-        
-        .notification-success {
-            border-color: #22c55e;
-        }
-        
-        .notification-error {
-            border-color: #ef4444;
-        }
-        
-        .notification-message {
-            color: var(--text-primary);
-            font-size: 0.875rem;
-        }
-        
-        .notification-close {
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            cursor: pointer;
-            padding: 0.25rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .notification-close:hover {
-            color: var(--text-primary);
-        }
-        
-        .notification-close svg {
-            width: 16px;
-            height: 16px;
-        }
-        
-        @keyframes slideIn {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-        
-        @keyframes slideOut {
-            from {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            to {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-        }
-    `;
-    document.head.appendChild(style);
-
-    document.body.appendChild(notification);
-
-    // Close button
-    const closeBtn = notification.querySelector('.notification-close');
-    closeBtn.addEventListener('click', () => {
-        notification.style.animation = 'slideOut 0.3s ease forwards';
-        setTimeout(() => notification.remove(), 300);
-    });
-
-    // Auto close after 5 seconds
-    setTimeout(() => {
-        if (notification.parentElement) {
-            notification.style.animation = 'slideOut 0.3s ease forwards';
-            setTimeout(() => notification.remove(), 300);
-        }
-    }, 5000);
-}
 
 // ============================================
 // Smooth Scroll
@@ -698,21 +583,6 @@ function initCursorTrail() {
     }
 }
 
-// ============================================
-// Performance Optimization
-// ============================================
-// Debounce function for performance
-function debounce(func, wait) {
-    let timeout;
-    return function executedFunction(...args) {
-        const later = () => {
-            clearTimeout(timeout);
-            func(...args);
-        };
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-    };
-}
 
 // Throttle function for performance
 function throttle(func, limit) {
@@ -731,36 +601,6 @@ window.addEventListener('scroll', throttle(() => {
     // Scroll-based animations can be added here
 }, 100));
 
-// ============================================
-// Lazy Loading Images
-// ============================================
-function initLazyLoading() {
-    const images = document.querySelectorAll('img[data-src]');
-
-    const imageObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src;
-                img.removeAttribute('data-src');
-                imageObserver.unobserve(img);
-            }
-        });
-    });
-
-    images.forEach(img => imageObserver.observe(img));
-}
-
-// ============================================
-// Preloader
-// ============================================
-window.addEventListener('load', () => {
-    const preloader = document.querySelector('.preloader');
-    if (preloader) {
-        preloader.style.opacity = '0';
-        setTimeout(() => preloader.remove(), 500);
-    }
-});
 
 // ============================================
 // Console Easter Egg
@@ -792,10 +632,8 @@ if (typeof module !== 'undefined' && module.exports) {
         initCounterAnimations,
         initTypewriterEffect,
         initParallaxEffects,
-
         initSmoothScroll,
         initIntersectionObserver,
-        initMicroInteractions,
-        showNotification
+        initMicroInteractions
     };
 }
